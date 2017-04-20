@@ -1,14 +1,12 @@
 package main
 
-// Sqrt return Sqrt value
-// x: sqrted value
-// z: z
-// count: loop count
-func Sqrt(x float64, z float64, count int) float64 {
-	if count <= 1 {
-		return z
+const base = 1.0
+
+// Sqrt return calc Sqrt value of x
+func Sqrt(x float64) float64 {
+	z := base
+	for i := 10; i > 0; i-- {
+		z = z - (z*z-x)/(2.0*z)
 	}
-	z = z - (z*z-x)/(2.0*z)
-	count--
-	return Sqrt(x, z, count)
+	return z
 }
