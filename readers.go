@@ -1,8 +1,9 @@
 package main
 
+// MyReader implemets reader interface
 type MyReader struct{}
 
-// TODO: Add a Read([]byte) (int, error) method to MyReader.
+// Read return byte array of ascii code of 'A'
 func (mr MyReader) Read(buffer []byte) (int, error) {
 	asciiCharacterCodeOfA := byte('A')
 	for i := range buffer {

@@ -8,7 +8,6 @@ import (
 
 const sqrt4 = 2.0
 
-// type `go test -run LoopsAndFunctions` in the shell
 func TestSqrt(t *testing.T) {
 	shouldBe2 := Sqrt(float64(4.0))
 	fmt.Println(shouldBe2)
